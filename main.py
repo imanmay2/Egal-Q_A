@@ -6,7 +6,7 @@ win=Tk()
 def func1():
     if(checkbtn1.get()==1):
         win.destroy()
-        options()
+        option()
     elif(checkbtn1.get()!=1):
         messagebox.showwarning('Warning','To proceed furthur, please hit the checkbox!!')
 win.maxsize(width=1000,height=600)
