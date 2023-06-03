@@ -1,6 +1,6 @@
 from tkinter import *
 from add_Q import add_Q
-def login():
+def signup():
     def func1():
         win.destroy()
         add_Q()
@@ -12,7 +12,7 @@ def login():
     canvas = Canvas(win,width=600, height=600)
     canvas.pack(fill= "both", expand=True)
     canvas.create_image(0, 0, image=bg, anchor="nw")
-    label1=Label(win,text='LOGIN!!',font=('Times New Roman',24,'bold','italic','underline'),bg='#95c5f5')
+    label1=Label(win,text='SIGNUP!!',font=('Times New Roman',24,'bold','italic','underline'),bg='#95c5f5')
     label1.place(x=260,y=16)
     label2=Label(win,text='ENTER YOUR NAME : ',font=('Times New Roman',16,'bold','italic'),bg='#b011fa')
     label2.place(x=60,y=100)
@@ -31,4 +31,3 @@ def login():
     label5=Label(win,text='**After hitting the start button ,user will start adding Question ,afterwards he/she will answer.',font=('Times New Roman',8,'bold'),bg='#b011fa')
     label5.place(x=40,y=570)
     win.mainloop()
-login()

@@ -27,4 +27,5 @@ def login():
     label5=Label(win,text='**After hitting the start button ,Questions will appear on the screen , which he/she have to answer.',font=('Times New Roman',8,'bold'),bg='#b011fa')
     label5.place(x=40,y=570)
     win.mainloop()
-login()
+
+
