@@ -12,5 +12,7 @@ def add_Q():
     new_image= ImageTk.PhotoImage(resized_image)
     bg = ImageTk.PhotoImage(resized_image)
     canvas.create_image(0, 0, image=bg, anchor="nw")
+    
     win.mainloop()
 
+add_Q()
