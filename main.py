@@ -11,6 +11,7 @@ def func1():
         messagebox.showwarning('Warning','To proceed furthur, please hit the checkbox!!')
 win.maxsize(width=1000,height=600)
 win.minsize(width=1000,height=600)
+win.title('Egal')
 canvas = Canvas(win,width=1000, height=600)
 canvas.pack(fill= "both", expand=True)
 img= (Image.open("Images/bg2.JPG"))

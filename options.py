@@ -16,6 +16,7 @@ def option():
     win=Tk()
     win.maxsize(width=800,height=600)
     win.minsize(width=800,height=600)
+    win.title('Egal')
     canvas = Canvas(win,width=1000, height=600)
     canvas.pack(fill= "both", expand=True)
     img= (Image.open("Images/bg5.JPG"))

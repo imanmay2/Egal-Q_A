@@ -3,6 +3,7 @@ def add_Q():
     win=Tk()
     win.maxsize(width=1000,height=500)
     win.minsize(width=1000,height=500)
+    win.title('Egal')
     from PIL import Image, ImageTk
     canvas = Canvas(win,width=1000, height=600)
     canvas.pack(fill= "both", expand=True)
