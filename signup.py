@@ -8,6 +8,7 @@ def signup():
     win=Tk()
     win.maxsize(width=600,height=600)
     win.minsize(width=600,height=600)
+    win.title('Egal')
     bg = ImageTk.PhotoImage(file="Images/bg1.PNG")
     canvas = Canvas(win,width=600, height=600)
     canvas.pack(fill= "both", expand=True)
