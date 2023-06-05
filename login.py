@@ -6,8 +6,13 @@ mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_US
                       password=os.environ.get("DB_PASS"), database='Egal')
 def login():
     def func1():
+        qid=ent2.get()
         win.destroy()
-        Q_A()
+        
+        
+        
+        
+        Q_A(qid)
     from PIL import Image, ImageTk
     win=Tk()
     win.maxsize(width=600,height=600)

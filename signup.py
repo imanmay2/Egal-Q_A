@@ -45,4 +45,4 @@ def signup():
     label5=Label(win,text='**After hitting the start button ,user will start adding Question ,afterwards he/she will answer.',font=('Times New Roman',8,'bold'),bg='#b011fa')
     label5.place(x=40,y=570)
     win.mainloop()
-signup()
+
