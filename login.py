@@ -2,9 +2,9 @@ import mysql.connector as mysql
 import os
 from tkinter import *
 from Q_A import Q_A
-def login():
-    mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
+mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
                       password=os.environ.get("DB_PASS"), database='Egal')
+def login():
     def func1():
         win.destroy()
         Q_A()
