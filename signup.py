@@ -1,7 +1,19 @@
 from tkinter import *
+import mysql.connector as mysql
 from add_Q import add_Q
+import os
 def signup():
+    mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
+                      password=os.environ.get("DB_PASS"), database='Egal')
     def func1():
+        cursor=mycon.cursor()
+        with open('T_name','w') as f1:
+            f1.write(ent7.get())
+        cursor.execute('create table {}(name TEXT);'.format(ent7.get()))
+        cursor.execute("insert into {}(name) values('{}');".format(ent7.get(),str(ent1.get())))
+        mycon.commit()
+        cursor.execute("insert into {}(name) values('{}');".format(ent7.get(),str(ent2.get())))
+        mycon.commit()
         win.destroy()
         add_Q()
     from PIL import Image, ImageTk
@@ -32,3 +44,4 @@ def signup():
     label5=Label(win,text='**After hitting the start button ,user will start adding Question ,afterwards he/she will answer.',font=('Times New Roman',8,'bold'),bg='#b011fa')
     label5.place(x=40,y=570)
     win.mainloop()
+signup()

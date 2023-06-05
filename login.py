@@ -6,9 +6,6 @@ def login():
     mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
                       password=os.environ.get("DB_PASS"), database='Egal')
     def func1():
-        cursor=mycon.cursor()
-        cursor.execute('create table {}(name TEXT);'.format(ent2.get()))
-        cursor.execute('insert into {}(name) values({});'.format(ent2.get(),ent1.get()))
         win.destroy()
         Q_A()
     from PIL import Image, ImageTk
@@ -36,5 +33,3 @@ def login():
     label5.place(x=40,y=570)
     win.mainloop()
 
-
-login()
