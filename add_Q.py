@@ -2,16 +2,21 @@ from tkinter import *
 import os
 import mysql.connector as mysql
 from tkinter import messagebox
-def add_Q():
-    mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
+
+mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
                       password=os.environ.get("DB_PASS"), database='Egal')
-    cursor=mycon.cursor()
+
+
+def add_Q(uid):
     def comp():
-        pass
+        win.destroy()
+        from options import option
+        option()
     def add():
-        
-        with open('T_name') as f1:
-            tabl=f1.read()
+        cursor=mycon.cursor(buffered=True)
+        #with open('T_name') as f1:
+            #tabl=f1.read()
+        tabl=uid
         cursor.execute("select * from {}".format(tabl))
         data=cursor.fetchall()
         k=0
@@ -26,7 +31,8 @@ def add_Q():
         cursor.execute("select * from {}".format(tabl))
         f=cursor.rowcount
         if(f==int(count)+int(ct[0])):
-            messagebox.showwarning("warning","You have already added ",ct,"Questions")
+            messagebox.showwarning("warning",f"You have already added {ct[0]} Questions")
+        ent2.delete(0,END)
     win=Tk()
     win.maxsize(width=1000,height=500)
     win.minsize(width=1000,height=500)
@@ -53,4 +59,5 @@ def add_Q():
     label5=Label(win,text="**NOTE You can't edit or retrieve the Questions after clicking in the ADD button!!",font=('Times New Roman',9,'bold','italic'),bg='pink')
     label5.place(x=300,y=470)
     win.mainloop()
+
 
