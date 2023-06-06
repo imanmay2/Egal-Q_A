@@ -4,6 +4,19 @@ import mysql.connector as mysql
 mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
                       password=os.environ.get("DB_PASS"), database='Egal')
 def Q_A(qid):
+    def show_Q(label2):
+        k=0
+        #if(label2.winfo_exists()):
+            #label2.destroy()
+        for i in li:
+            if(k==0):
+                k+=1
+                continue
+            else:
+                label2=Label(win,text=i,bg='pink',fg='black',font=('Times New Roman',16,'bold','italic'),height='4',width='48')
+                label2.place(x=100,y=140)
+    def submit():
+        pass
     tabl=qid
     win=Tk()
     win.title('Egal')
@@ -28,8 +41,15 @@ def Q_A(qid):
         k=k+1
         if(k>2):
             li.append(i[0])
-    #print(li)
-
-        
+    # show Question label
+    label2=Label(win,text=li[0],bg='pink',fg='black',font=('Times New Roman',16,'bold','italic'),height='4',width='56')
+    label2.place(x=180,y=140)
+    var=StringVar()
+    ent1=Entry(win,bg='white',fg='black',bd=2,font=('Times New Roman',22,'italic'),width='60',textvariable=var)
+    ent1.place(x=60,y=300) # answer wala entry box
+    btn1=Button(win,text="END TEST",bg='pink',font=('Times New Roman',18,'italic'),command=submit)
+    btn1.place(x=130,y=380)
+    btn2=Button(win,text="SUBMIT & NEXT",bg='#0ceb86',font=('Times New Roman',18,'italic'),command=show_Q(label2))
+    btn2.place(x=700,y=380)
     win.mainloop()
 Q_A('w23')
