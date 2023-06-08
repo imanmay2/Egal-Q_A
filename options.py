@@ -1,17 +1,17 @@
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
-from login import login
-from signup import signup
 def option():
     def Exit():
         win.destroy()
     def Next():
         if var.get()==0:
             win.destroy()
+            from signup import signup
             signup()
         elif(var.get()==1):
             win.destroy()
+            from login import login
             login()
     win=Tk()
     win.maxsize(width=800,height=600)
@@ -34,4 +34,5 @@ def option():
     btn2=Button(win,text='NEXT',command=Next,bg='black',fg='white',font=24)
     btn2.place(x=450,y=295)
     win.mainloop()
+
 

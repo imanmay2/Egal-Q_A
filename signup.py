@@ -10,13 +10,14 @@ def signup():
         cursor=mycon.cursor()
         #with open('T_name','w') as f1:
             #f1.write(ent7.get())
-        cursor.execute('create table {}(name TEXT);'.format(uid))
-        cursor.execute("insert into {}(name) values('{}');".format(uid,str(ent1.get())))
+        cursor.execute('create table {}(Question TEXT,Answer TEXT);'.format(uid))
+        cursor.execute("insert into {}(Question) values('{}');".format(uid,str(ent1.get())))
         mycon.commit()
-        cursor.execute("insert into {}(name) values('{}');".format(uid,str(ent2.get())))
+        cursor.execute("insert into {}(Question) values('{}');".format(uid,str(ent2.get())))
         mycon.commit()
+        no_of_ques=ent2.get()
         win.destroy()
-        add_Q(uid)
+        add_Q(uid,no_of_ques)
     from PIL import Image, ImageTk
     win=Tk()
     win.maxsize(width=600,height=600)

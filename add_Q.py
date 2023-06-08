@@ -6,32 +6,30 @@ from tkinter import messagebox
 mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
                       password=os.environ.get("DB_PASS"), database='Egal')
 
-
-def add_Q(uid):
+count_Q=0
+def add_Q(uid,no_of_ques):
+    global count_Q
     def comp():
         win.destroy()
         from options import option
         option()
     def add():
+        global count_Q
+        count_Q+=1
         cursor=mycon.cursor(buffered=True)
         #with open('T_name') as f1:
             #tabl=f1.read()
         tabl=uid
-        cursor.execute("select * from {}".format(tabl))
-        data=cursor.fetchall()
-        k=0
-        j=0
-        count=2
-        for i in data:
-            k=k+1
-            if(k==2):
-                ct=i
-        cursor.execute("insert into {} values('{}')".format(tabl,str(ent2.get())))
-        mycon.commit()
-        cursor.execute("select * from {}".format(tabl))
-        f=cursor.rowcount
-        if(f==int(count)+int(ct[0])):
-            messagebox.showwarning("warning",f"You have already added {ct[0]} Questions")
+        if(ent2.get()!=''):
+            cursor.execute("insert into {} (Question) values('{}')".format(tabl,str(ent2.get())))
+            mycon.commit()
+        else:
+            messagebox.showwarning("Warning","Question can't be blank!!!!")
+        #cursor.execute("select * from {}".format(tabl))
+        #f=cursor.rowcount
+        #if(f==int(count)+int(ct[0])):
+        if(count_Q==int(no_of_ques)):
+            messagebox.showwarning("Warning",f"You have already added {count_Q} Questions")
         ent2.delete(0,END)
     win=Tk()
     win.maxsize(width=1000,height=500)

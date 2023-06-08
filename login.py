@@ -8,10 +8,6 @@ def login():
     def func1():
         qid=ent2.get()
         win.destroy()
-        
-        
-        
-        
         Q_A(qid)
     from PIL import Image, ImageTk
     win=Tk()
