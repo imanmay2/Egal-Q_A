@@ -47,7 +47,7 @@ def review_A(q_id):
     for i in data:
         k+=1
         if(k>1):
-            d[i[0]]=i[1]
+            d[i[0]]=i[1] 
     #print(d)
     win=Tk()
     win.maxsize(width=1000,height=500)

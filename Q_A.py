@@ -12,6 +12,11 @@ def Q_A(qid):
         global qno,ans_li
         if(qno==len(li)-1):
             btn2.config(text='SUBMIT',command=end)
+            ans=ent1.get()
+            ans_li[li[qno]]=ans
+            print(ans_li)
+            cursor.execute("UPDATE {} set Answer='{}' where Question='{}'".format(tabl,ans,li[qno]))
+            mycon.commit()
         else:
             qno+=1
             label2.config(text=li[qno])

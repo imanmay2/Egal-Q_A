@@ -21,7 +21,9 @@ def add_Q(uid,no_of_ques):
             #tabl=f1.read()
         tabl=uid
         if(ent2.get()!=''):
-            cursor.execute("insert into {} (Question) values('{}')".format(tabl,str(ent2.get())))
+            valEntry=ent2.get()
+            valEntry=valEntry.replace('"',"'")
+            cursor.execute('insert into {} (Question) values("{}")'.format(tabl,str(valEntry)))
             mycon.commit()
         else:
             messagebox.showwarning("Warning","Question can't be blank!!!!")
@@ -57,5 +59,4 @@ def add_Q(uid,no_of_ques):
     label5=Label(win,text="**NOTE You can't edit or retrieve the Questions after clicking in the ADD button!!",font=('Times New Roman',9,'bold','italic'),bg='pink')
     label5.place(x=300,y=470)
     win.mainloop()
-
 
