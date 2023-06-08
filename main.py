@@ -19,7 +19,6 @@ resized_image= img.resize((1000,600), Image.ANTIALIAS)
 new_image= ImageTk.PhotoImage(resized_image)
 bg = ImageTk.PhotoImage(resized_image)
 canvas.create_image(0, 0, image=bg, anchor="nw")
-
 #win.configure(bg='#03dbfc')
 label3=Label(win,text='GUIDELINES FOR USING THE SOFTWARE :',font=('Serif',11,'bold','italic'),bg='#03dbfc')
 label3.place(x=50,y=80)

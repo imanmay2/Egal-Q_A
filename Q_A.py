@@ -57,7 +57,7 @@ def Q_A(qid):
         k=k+1
         if(k>2):
             li.append(i[0])
-    #print(li)
+    print(li)
     # show Question label
     label2=Label(win,text=li[qno],bg='pink',fg='black',font=('Times New Roman',16,'bold','italic'),height='4',width='56')
     label2.place(x=180,y=140)
