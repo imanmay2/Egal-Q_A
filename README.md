@@ -22,7 +22,7 @@ Go to the project directory, run the main.py file on VS Code or IDLE python in 3
 - Guidelines for using the application <!-- ![Logo](Images/1st.PNG) -->
             <kbd>![Images](src/Images/s1.PNG)</kbd>
             
--User can add Questions for self evaluation  <!-- ![Logo](Images/html.PNG) -->
+- User can add Questions for self evaluation  <!-- ![Logo](Images/html.PNG) -->
             <kbd>![Images](src/Images/s3.PNG)</kbd>
 
 - User can solve those Questions afterwards <!-- ![Logo](Images/css.PNG) -->
