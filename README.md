@@ -9,17 +9,17 @@ THIS SOFTWARE IS PARTICULLARLY DESIGNED FOR THOSE FELLOWS WHO LOVES TO TEST THEM
 ## Examples
 
 - Guidelines for using the application <!-- ![Logo](Images/1st.PNG) -->
-            <kbd>![Image](src/Images/s1.PNG)</kbd>
+            <kbd>![Images](src/Images/s1.PNG)</kbd>
             
 -User can add Questions for self evaluation  <!-- ![Logo](Images/html.PNG) -->
-            <kbd>![Image](src/Images/s3.PNG)</kbd>
+            <kbd>![Images](src/Images/s3.PNG)</kbd>
 
 - User can solve those Questions afterwards <!-- ![Logo](Images/css.PNG) -->
-            <kbd>![Image](src/Images/s4.PNG)</kbd>
+            <kbd>![Images](src/Images/s4.PNG)</kbd>
 - User then have to review their Answers to be correct or incorrect <!-- ![Logo](Images/css.PNG) -->
-            <kbd>![Image](src/Images/s5.PNG)</kbd>
+            <kbd>![Images](src/Images/s5.PNG)</kbd>
 - User will be shown the result and their overall percentage of the Self Assessment <!-- ![Logo](Images/css.PNG) -->
-            <kbd>![Image](src/Images/s6.PNG)</kbd>            
+            <kbd>![Images](src/Images/s6.PNG)</kbd>            
            
 **NOTE : PLEASE READ THE GUIDELINES OF USING THE SOFTWARE, WHICH WILL BE SHOWN AT THE VERY BEGINNING . **
 
