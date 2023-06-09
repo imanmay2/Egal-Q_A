@@ -1,6 +1,6 @@
 # Egal-Q_A
 THIS SOFTWARE IS PARTICULLARLY DESIGNED FOR THOSE FELLOWS WHO LOVES TO TEST THEMSELVES ON A REGULAR BASIS.
-' Egal-Q_A ' can help to fulfil those goals.
+' Egal-Q_A ' can help to fulfil their goals.
 
 ## Usage
 
