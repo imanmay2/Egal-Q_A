@@ -6,6 +6,17 @@ THIS SOFTWARE IS PARTICULLARLY DESIGNED FOR THOSE FELLOWS WHO LOVES TO TEST THEM
 
 - Open any editor like  VISUAL STUDIO CODE, run the above python code.
 
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/manmay2/Egal-Q_A
+```
+
+Go to the project directory, run the main.py file on VS Code or IDLE python in 3.x version.
+
 ## Examples
 
 - Guidelines for using the application <!-- ![Logo](Images/1st.PNG) -->
