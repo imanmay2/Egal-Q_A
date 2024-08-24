@@ -47,7 +47,7 @@ def Q_A(qid):
     canvas = Canvas(win,width=1000, height=600)
     canvas.pack(fill= "both", expand=True)
     img= (Image.open("Images/bg6.JPG"))
-    resized_image= img.resize((1000,600), Image.ANTIALIAS)
+    resized_image= img.resize((1000,600), Image.LANCZOS)
     new_image= ImageTk.PhotoImage(resized_image)
     bg = ImageTk.PhotoImage(resized_image)
     canvas.create_image(0, 0, image=bg, anchor="nw")
