@@ -1,8 +1,9 @@
 from tkinter import *
 import os
 import mysql.connector as mysql
-mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
-                      password=os.environ.get("DB_PASS"), database='Egal')
+mycon=mysql.connect(host='localhost', user='root',
+                      password='Manmay@1234', database='Egal')
+
 qno=0
 ans_li={}
 def Q_A(qid):

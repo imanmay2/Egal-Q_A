@@ -1,8 +1,9 @@
 from tkinter import *
 import mysql.connector as mysql
 import os
-mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
-                      password=os.environ.get("DB_PASS"), database='Egal')
+mycon=mysql.connect(host='localhost', user='root',
+                      password='Manmay@1234', database='Egal')
+
 qno=0
 corr=0
 incorr=0
@@ -57,7 +58,7 @@ def review_A(q_id):
     canvas = Canvas(win,width=1000, height=600)
     canvas.pack(fill= "both", expand=True)
     img= (Image.open("Images/bg6.JPG"))
-    resized_image= img.resize((1000,600), Image.ANTIALIAS)
+    resized_image= img.resize((1000,600),Image.LANCZOS)
     new_image= ImageTk.PhotoImage(resized_image)
     bg = ImageTk.PhotoImage(resized_image)
     canvas.create_image(0, 0, image=bg, anchor="nw")

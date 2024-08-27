@@ -3,8 +3,8 @@ import mysql.connector as mysql
 from add_Q import add_Q
 import os
 def signup():
-    mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
-                      password=os.environ.get("DB_PASS"), database='Egal')
+    mycon=mysql.connect(host='localhost', user='root',
+                      password='Manmay@1234', database='Egal')
     def func1():
         uid=ent7.get()
         cursor=mycon.cursor()

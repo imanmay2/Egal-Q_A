@@ -3,8 +3,8 @@ import os
 import mysql.connector as mysql
 from tkinter import messagebox
 
-mycon=mysql.connect(host=os.environ.get("DB_SERVER"), user=os.environ.get("DB_USER"),
-                      password=os.environ.get("DB_PASS"), database='Egal')
+mycon=mysql.connect(host='localhost', user='root',
+                      password='Manmay@1234', database='Egal')
 
 count_Q=0
 def add_Q(uid,no_of_ques):
