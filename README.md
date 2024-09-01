@@ -9,7 +9,7 @@ THIS SOFTWARE IS PARTICULLARLY DESIGNED FOR THOSE FELLOWS WHO LOVES TO TEST THEM
 
 ## Run Locally
 
-Clone the project
+Clone the project-
 
 ```bash
   git clone https://github.com/manmay2/Egal-Q_A
